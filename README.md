@@ -1,4 +1,3 @@
-
 # Config Files Backup Script
 
 This script automates the process of backing up essential configuration files and directories from your home directory to a remote GitHub repository. It uses `rsync` to copy files and directories, ensuring that the structure and permissions are preserved.
@@ -20,7 +19,7 @@ This script automates the process of backing up essential configuration files an
 Before running the script, ensure that the following requirements are met:
 
 - **`rsync` Version**: The script checks that your `rsync` version is greater than 3.0. If it's not, you may need to install or update it using Homebrew.
-- **GitHub Repository**: The script pushes the backup to a GitHub repository. You need to create a repository and update the `GITHUB_REPO_URL` variable with the appropriate URL.
+- **GitHub Repository**: The script pushes the backup to a GitHub repository. You need to create a repository and update the `GITHUB_REPO_URL` variable with the appropriate URL. Make sure this is not a public repository.
 
 ---
 

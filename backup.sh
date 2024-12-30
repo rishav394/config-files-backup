@@ -16,7 +16,7 @@ CONFIG_ITEMS=(
 )
 
 BACKUP_DIR="$HOME/config-files"
-GITHUB_REPO_URL="git@github.com:rishav394/config-files.git"
+GITHUB_REPO_URL="git@github.com:rishav394/config-files.git" # Make sure this is not a public repo
 BRANCH="main" # Change to your target branch if needed
 COMMIT_MESSAGE="Backup config files and directories on $(date)"
 
@@ -64,6 +64,6 @@ git add . || error_exit "Failed to stage changes"
 git commit -nm "$COMMIT_MESSAGE" || error_exit "Failed to commit changes"
 
 # Step 7: Push changes
-# git push origin "$BRANCH" || error_exit "Failed to push changes"
+git push origin "$BRANCH" || error_exit "Failed to push changes"
 
 echo "Backup completed successfully!"
