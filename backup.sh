@@ -39,7 +39,7 @@ for item in "${CONFIG_ITEMS[@]}"; do
     for expanded_item in "${expanded_items[@]}"; do
         if [[ -e "$expanded_item" ]]; then
             # Use rsync for better handling of directories
-            /opt/homebrew/bin/rsync -a --relative --mkpath "$expanded_item" "$BACKUP_DIR" || error_exit "Failed to copy $expanded_item"
+            rsync -a --relative --mkpath "$expanded_item" "$BACKUP_DIR" || error_exit "Failed to copy $expanded_item"
         else
             echo "Warning: $expanded_item not found, skipping"
         fi
